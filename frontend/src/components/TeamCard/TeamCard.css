@@ -4,7 +4,6 @@
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 

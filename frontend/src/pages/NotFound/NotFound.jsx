@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function NotFound() {
   return (
-    <section className="section" style={{ textAlign: 'center', minHeight: '50vh' }}>
+    <section className="section" style={{ minHeight: '50vh' }}>
       <div className="container">
         <h1 style={{ fontSize: '3rem', marginBottom: 12 }}>Page not found</h1>
         <p className="lead" style={{ marginBottom: 28 }}>

@@ -1,5 +1,4 @@
 .about-intro {
-  max-width: 860px;
   margin-bottom: 0;
 }
 
@@ -98,8 +97,6 @@
 .team-grid {
   display: grid;
   gap: 26px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 /* ---------- Business description ---------- */

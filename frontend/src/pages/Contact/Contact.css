@@ -4,9 +4,7 @@
 }
 
 .contact-page__head {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 64px;
+  margin-bottom: 64px;
 }
 
 .contact-page__head h1 {
@@ -22,8 +20,6 @@
 }
 
 .contact-page__head p {
-  max-width: 650px;
-  margin: 0 auto;
   color: var(--text-soft);
   font-size: 1.02rem;
 }
