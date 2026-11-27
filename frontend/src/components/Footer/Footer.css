@@ -1,0 +1,119 @@
+.footer {
+  background: linear-gradient(180deg, #2b1d14 0%, var(--footer-bg) 100%);
+  color: rgba(251, 246, 238, 0.8);
+  padding-top: 72px;
+  border-top: 3px solid var(--gold);
+}
+
+.footer__grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+}
+
+.footer__brand p {
+  margin: 18px 0 22px;
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(217, 164, 65, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  transition: background var(--transition), color var(--transition);
+}
+
+.footer__social a:hover {
+  background: var(--gold);
+  color: var(--text);
+}
+
+.footer__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.15rem;
+  color: var(--cream);
+  margin-bottom: 18px;
+}
+
+.footer__title::after {
+  content: '';
+  width: 26px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.footer__col ul {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+  font-size: 0.92rem;
+}
+
+.footer__col a {
+  transition: color var(--transition);
+}
+
+.footer__col a:hover {
+  color: var(--gold);
+}
+
+.footer__contact li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footer__icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(217, 164, 65, 0.15);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__contact a,
+.footer__contact span:last-child {
+  padding-top: 4px;
+  word-break: break-word;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba(251, 246, 238, 0.12);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1.4fr 0.8fr 1fr 1.3fr;
+  }
+}

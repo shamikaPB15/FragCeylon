@@ -1,0 +1,112 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: rgba(43, 29, 20, 0.96);
+  backdrop-filter: blur(8px);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.navbar--scrolled {
+  background: rgba(31, 21, 15, 0.98);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.navbar__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  display: inline-flex;
+}
+
+/* ---------- Links ---------- */
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.navbar__link {
+  position: relative;
+  color: var(--cream);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 0;
+  transition: color var(--transition);
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+
+.navbar__link:hover,
+.navbar__link.is-active {
+  color: var(--gold);
+}
+
+.navbar__link:hover::after,
+.navbar__link.is-active::after {
+  width: 100%;
+}
+
+/* ---------- Mobile ---------- */
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  cursor: pointer;
+  padding: 6px;
+}
+
+@media (max-width: 860px) {
+  .navbar__toggle {
+    display: inline-flex;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #1f150f;
+    padding: 8px 20px 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition);
+  }
+
+  .navbar__links.is-open {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(251, 246, 238, 0.08);
+  }
+
+  .navbar__link::after {
+    display: none;
+  }
+}

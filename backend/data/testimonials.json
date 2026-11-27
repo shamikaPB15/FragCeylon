@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah M.",
+    "location": "United Kingdom",
+    "rating": 5,
+    "quote": "The cinnamon quills are incredibly fragrant – nothing like the supermarket kind.",
+    "placeholder": true
+  },
+  {
+    "id": 2,
+    "name": "Nimal P.",
+    "location": "Colombo",
+    "rating": 5,
+    "quote": "Fresh, well-packed and delivered on time. The black pepper has a real kick.",
+    "placeholder": true
+  },
+  {
+    "id": 3,
+    "name": "Chef Ahmed R.",
+    "location": "Dubai",
+    "rating": 5,
+    "quote": "Our restaurant switched to their turmeric and chilli. Customers notice the difference.",
+    "placeholder": true
+  },
+  {
+    "id": 4,
+    "name": "Emily T.",
+    "location": "Australia",
+    "rating": 4,
+    "quote": "Friendly service and genuine Ceylon cinnamon. I'll be ordering again.",
+    "placeholder": true
+  }
+]

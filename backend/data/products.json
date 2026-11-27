@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "slug": "ceylon-cinnamon-powder",
+    "name": "Ceylon Cinnamon Powder",
+    "description": "Finely ground from true Ceylon cinnamon (Cinnamomum verum). Sweet, delicate and perfect for baking, drinks and desserts.",
+    "image": "/images/products/cinnamon-powder.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 2,
+    "slug": "ceylon-cinnamon-quills",
+    "name": "Ceylon Cinnamon Quills",
+    "description": "Hand-rolled quills peeled by skilled Sri Lankan artisans. Light, layered and naturally aromatic.",
+    "image": "/images/products/cinnamon-quills.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 3,
+    "slug": "ceylon-black-pepper",
+    "name": "Ceylon Black Pepper",
+    "description": "Bold, sun-dried peppercorns with a rich, sharp heat. Ideal for everyday cooking.",
+    "image": "/images/products/black-pepper.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 4,
+    "slug": "white-pepper",
+    "name": "White Pepper",
+    "description": "Smooth and mildly earthy, great for soups, sauces and light-coloured dishes.",
+    "image": "/images/products/white-pepper.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 5,
+    "slug": "ginger-powder",
+    "name": "Ginger Powder",
+    "description": "Warm and zesty, made from carefully dried ginger root. Great for curries, teas and baking.",
+    "image": "/images/products/ginger-powder.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 6,
+    "slug": "cloves",
+    "name": "Cloves",
+    "description": "Whole, hand-picked cloves with an intense, sweet-spicy aroma.",
+    "image": "/images/products/cloves.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 7,
+    "slug": "chilli",
+    "name": "Chilli",
+    "description": "Vibrant Sri Lankan chilli (powder / flakes) for authentic colour and heat.",
+    "image": "/images/products/chilli.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  },
+  {
+    "id": 8,
+    "slug": "turmeric",
+    "name": "Turmeric",
+    "description": "Bright golden turmeric powder with a natural earthy flavour.",
+    "image": "/images/products/turmeric.jpg",
+    "sizes": ["50g", "100g", "250g", "1kg"]
+  }
+]

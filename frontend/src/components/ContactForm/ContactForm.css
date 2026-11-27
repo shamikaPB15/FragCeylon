@@ -1,0 +1,99 @@
+.cf {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cf__product {
+  font-size: 0.9rem;
+  color: var(--cinnamon);
+  background: rgba(217, 164, 65, 0.12);
+  border-left: 3px solid var(--gold);
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.cf__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf input,
+.cf textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #f7f5f2;
+  border: 1px solid #ddd6cc;
+  border-radius: 8px;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.cf textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.cf input::placeholder,
+.cf textarea::placeholder {
+  color: #8e8378;
+}
+
+.cf input:focus,
+.cf textarea:focus {
+  outline: none;
+  background: var(--white);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.2);
+}
+
+.cf [aria-invalid='true'] {
+  border-color: #c0392b;
+  background: #fdf3f2;
+}
+
+.cf__error {
+  font-size: 0.8rem;
+  color: #c0392b;
+}
+
+.cf__submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+}
+
+.cf__alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.cf__alert--success {
+  background: #e8f6ec;
+  color: #1e7a3c;
+  border: 1px solid #b7e2c3;
+}
+
+.cf__alert--error {
+  background: #fdecea;
+  color: #b03a2e;
+  border: 1px solid #f3c2bc;
+}
+
+.cf__alert a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Honeypot – visually hidden but not display:none (some bots skip those) */
+.cf__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

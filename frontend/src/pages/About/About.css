@@ -1,0 +1,162 @@
+.about-intro {
+  max-width: 860px;
+  margin-bottom: 0;
+}
+
+/* ---------- Vision & Mission ---------- */
+.vm {
+  display: grid;
+  gap: 24px;
+}
+
+.vm__card {
+  position: relative;
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  border: 1px solid rgba(217, 164, 65, 0.35);
+  overflow: hidden;
+}
+
+.vm__card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cinnamon), var(--gold));
+}
+
+.vm__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--cinnamon);
+  color: var(--cream);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.vm__card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.vm__card p {
+  color: var(--text-soft);
+}
+
+/* ---------- Why choose us ---------- */
+.why-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.why-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--shadow);
+  /* keep the fade-in (opacity) transition from .reveal */
+  transition: opacity 0.7s ease, transform 0.4s ease, box-shadow var(--transition);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.why-card__icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(217, 164, 65, 0.15);
+  color: var(--cinnamon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-card h3 {
+  font-size: 1.12rem;
+  margin-bottom: 4px;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* ---------- Team ---------- */
+.team-grid {
+  display: grid;
+  gap: 26px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---------- Business description ---------- */
+.story {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.story__media {
+  aspect-ratio: 5 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+
+.story__text .eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 10px;
+}
+
+.story__text h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.story__text p {
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .vm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .story {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}

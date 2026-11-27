@@ -1,0 +1,20 @@
+.back-to-top {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(217, 164, 65, 0.6);
+  background: transparent;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.back-to-top:hover {
+  background: var(--gold);
+  color: var(--text);
+  transform: translateY(-3px);
+}

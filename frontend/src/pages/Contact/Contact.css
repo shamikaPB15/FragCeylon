@@ -1,0 +1,50 @@
+.contact-page {
+  background: #faf8f5;
+  padding: 80px 0 96px;
+}
+
+.contact-page__head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+
+.contact-page__head h1 {
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+
+.contact-page__head h1 span {
+  display: block;
+  color: var(--gold-dark);
+}
+
+.contact-page__head p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-soft);
+  font-size: 1.02rem;
+}
+
+.contact-page__grid {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 52px;
+}
+
+.contact-page__grid > * {
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  .contact-page {
+    padding: 110px 0 120px;
+  }
+
+  .contact-page__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+}

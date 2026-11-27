@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "badge": "10% OFF",
+    "title": "First Order Discount",
+    "description": "Enjoy 10% off your very first order with FragCeylon.",
+    "code": "CEYLON10",
+    "validUntil": "[DATE]",
+    "active": true,
+    "placeholder": true
+  },
+  {
+    "id": 2,
+    "badge": "WHOLESALE",
+    "title": "Bulk Orders – Special Prices",
+    "description": "Special wholesale prices for orders of 5kg and above. Perfect for restaurants and retailers.",
+    "code": "",
+    "validUntil": "[DATE]",
+    "active": true,
+    "placeholder": true
+  },
+  {
+    "id": 3,
+    "badge": "SAVE 15%",
+    "title": "Spice Gift Box",
+    "description": "A curated mix of cinnamon, pepper, cloves and turmeric – a perfect gift, now 15% off.",
+    "code": "",
+    "validUntil": "[DATE]",
+    "active": true,
+    "placeholder": true
+  }
+]
