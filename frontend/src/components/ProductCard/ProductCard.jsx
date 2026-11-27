@@ -19,9 +19,14 @@ export default function ProductCard({ product }) {
         <h3 className="product-card__name">{name}</h3>
         <p className="product-card__desc">{description}</p>
         {sizes.length > 0 && (
-          <p className="product-card__sizes">
-            <span>Available in:</span> {sizes.join(' / ')}
-          </p>
+          <div className="product-card__sizes">
+            <span className="sr-only">Available in:</span>
+            {sizes.map((size) => (
+              <span key={size} className="product-card__size">
+                {size}
+              </span>
+            ))}
+          </div>
         )}
         <Link to={`/contact?product=${slug}`} className="btn btn--dark product-card__btn">
           Enquire

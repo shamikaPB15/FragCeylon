@@ -76,45 +76,59 @@ export default function ProductSlider({ products }) {
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
-      <div className="slider__viewport" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-        <ul
-          className="slider__track"
-          style={{ transform: `translateX(-${(index * 100) / perView}%)` }}
-        >
-          {products.map((product) => (
-            <li
-              key={product.slug}
-              className="slider__slide"
-              style={{ flexBasis: `${100 / perView}%` }}
+      {/* Cards with an arrow on each side */}
+      <div className="slider__stage">
+        <div className="slider__viewport" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+          <ul
+            className="slider__track"
+            style={{ transform: `translateX(-${(index * 100) / perView}%)` }}
+          >
+            {products.map((product) => (
+              <li
+                key={product.slug}
+                className="slider__slide"
+                style={{ flexBasis: `${100 / perView}%` }}
+              >
+                <ProductCard product={product} />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {maxIndex > 0 && (
+          <>
+            <button
+              type="button"
+              className="slider__arrow slider__arrow--prev"
+              onClick={prev}
+              aria-label="Previous spices"
             >
-              <ProductCard product={product} />
-            </li>
-          ))}
-        </ul>
+              <Icon name="arrowLeft" size={22} />
+            </button>
+            <button
+              type="button"
+              className="slider__arrow slider__arrow--next"
+              onClick={next}
+              aria-label="Next spices"
+            >
+              <Icon name="arrowRight" size={22} />
+            </button>
+          </>
+        )}
       </div>
 
       {maxIndex > 0 && (
-        <div className="slider__controls">
-          <button type="button" className="slider__arrow" onClick={prev} aria-label="Previous spices">
-            <Icon name="arrowLeft" size={20} />
-          </button>
-
-          <div className="slider__dots">
-            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                className={`slider__dot ${i === index ? 'is-active' : ''}`}
-                onClick={() => setIndex(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                aria-current={i === index}
-              />
-            ))}
-          </div>
-
-          <button type="button" className="slider__arrow" onClick={next} aria-label="Next spices">
-            <Icon name="arrowRight" size={20} />
-          </button>
+        <div className="slider__dots">
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              className={`slider__dot ${i === index ? 'is-active' : ''}`}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              aria-current={i === index}
+            />
+          ))}
         </div>
       )}
     </div>
