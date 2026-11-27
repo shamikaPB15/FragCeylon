@@ -27,7 +27,7 @@ FRAGCEYLON/
     ├── index.html
     ├── vite.config.js        ← dev proxy: /api → http://localhost:5000
     ├── public/
-    │   ├── favicon.svg
+    │   ├── favicon.png
     │   └── images/           ← PUT YOUR IMAGES HERE (see images/README.txt)
     └── src/
         ├── main.jsx, App.jsx, index.css, api.js

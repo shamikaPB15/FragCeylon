@@ -1,57 +1,20 @@
 .logo {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
 }
 
-.logo__mark,
 .logo__img {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  object-fit: contain;
+  width: auto;
 }
 
-.logo__mark {
-  display: inline-flex;
-  padding: 6px;
-  border-radius: 10px;
-  background: #2b1d14;
-  border: 1px solid rgba(217, 164, 65, 0.5);
-  color: #2b1d14;
+.logo--nav .logo__img {
+  height: calc(var(--nav-height) - 32px); /* leaves 16px above and below */
 }
 
-.logo__text {
-  font-family: var(--font-heading);
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--cream);
-  letter-spacing: 0.5px;
-}
-
-.logo__text span {
-  color: var(--gold);
-}
-
-/* Footer: bigger mark */
-.logo--footer .logo__mark,
 .logo--footer .logo__img {
-  width: 64px;
-  height: 64px;
+  height: 230px;
 }
 
-.logo--footer .logo__text {
-  font-size: 1.8rem;
-}
-
-/* Contact card: large square logo, no text */
-.logo--card .logo__mark,
+/* Contact card */
 .logo--card .logo__img {
-  width: 130px;
   height: 130px;
-  border-radius: 6px;
-}
-
-.logo--card .logo__mark {
-  padding: 22px;
 }

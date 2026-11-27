@@ -7,7 +7,7 @@ import './ContactInfoCard.css';
 export default function ContactInfoCard() {
   return (
     <div className="contact-card info-card">
-      <Logo variant="card" showText={false} />
+      <Logo variant="card" />
 
       <ul className="info-card__list">
         {SITE.phones.map((p) => (

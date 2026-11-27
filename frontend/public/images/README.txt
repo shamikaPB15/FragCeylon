@@ -4,7 +4,7 @@ Drop your real images here using EXACTLY these file names.
 Until a file exists, the website shows a styled placeholder box instead.
 
 images/
-  logo.png              Logo (square, ~400x400, transparent PNG works best)
+  logo/                 Company logos (web copies; originals in logo/original)
   home-hero.jpg         Home page hero        (1920 x 900)
   about-hero.jpg        About page hero       (1920 x 700)
   products-hero.jpg     Products page hero    (1920 x 700)

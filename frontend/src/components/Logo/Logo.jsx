@@ -1,38 +1,24 @@
-import { useState } from 'react';
 import './Logo.css';
 
+// Web-sized copies live in /public/images/logo (originals in /public/images/logo/original)
+// "height" also caps the size if the stylesheet has not loaded yet.
+const LOGOS = {
+  nav: { src: '/images/logo/logo-nav-white.png', height: 76 },
+  // Same logo with cream lettering, for the dark footer
+  footer: { src: '/images/logo/logo-footer.png', height: 230 },
+  card: { src: '/images/logo/logo-stacked-pvt-ltd.png', height: 130 },
+};
+
 /**
- * Logo – uses /images/logo.png when it exists,
- * otherwise shows a simple placeholder mark.
- * {/* REPLACE: /images/logo.png (square, ~400×400, transparent PNG) *\/}
- *
+ * Company logo.
  * variant: "nav" | "footer" | "card"
  */
-export default function Logo({ variant = 'nav', showText = true }) {
-  const [failed, setFailed] = useState(false);
+export default function Logo({ variant = 'nav' }) {
+  const { src, height } = LOGOS[variant];
 
   return (
     <span className={`logo logo--${variant}`}>
-      {failed ? (
-        <span className="logo__mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="100%" height="100%">
-            <path d="M32 10c-10 9-14 19-14 27a14 14 0 0 0 28 0c0-8-4-18-14-27z" fill="#D9A441" />
-            <path d="M32 22v32" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-          </svg>
-        </span>
-      ) : (
-        <img
-          className="logo__img"
-          src="/images/logo.png"
-          alt={showText ? '' : 'FragCeylon logo'}
-          onError={() => setFailed(true)}
-        />
-      )}
-      {showText && (
-        <span className="logo__text">
-          Frag<span>Ceylon</span>
-        </span>
-      )}
+      <img className="logo__img" src={src} height={height} alt="FragCeylon (Pvt) Ltd" />
     </span>
   );
 }
