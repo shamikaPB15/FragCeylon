@@ -28,6 +28,11 @@
   padding: 24px;
 }
 
+/* Keep the right-hand side of the photo in view when it is cropped (phones) */
+.hero--lg .hero__bg .img-real {
+  object-position: right center;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -35,14 +40,11 @@
 }
 
 .hero__content {
+  width: 100%;
   position: relative;
   z-index: 1;
   padding-top: 64px;
   padding-bottom: 64px;
-}
-
-.hero--md .hero__content {
-  text-align: center;
 }
 
 .hero__eyebrow {
@@ -63,8 +65,6 @@
 }
 
 .hero--md .hero__title {
-  margin-left: auto;
-  margin-right: auto;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
 }
 
@@ -75,13 +75,38 @@
   font-weight: 300;
 }
 
-.hero--md .hero__subtitle {
-  margin: 0 auto;
-}
-
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 34px;
+}
+
+.hero--lg .hero__subtitle {
+  font-size: 1.3rem;
+}
+
+/* Home hero on wide screens: the text fills the dark left side of the photo */
+@media (min-width: 1024px) {
+  .hero--lg .hero__eyebrow {
+    font-size: clamp(0.85rem, 0.9vw, 1.05rem);
+  }
+
+  .hero--lg .hero__title {
+    font-size: clamp(3rem, 4.4vw, 5.6rem);
+    max-width: 40vw;
+  }
+
+  .hero--lg .hero__subtitle {
+    font-size: clamp(1.25rem, 1.45vw, 1.8rem);
+    line-height: 1.8;
+    max-width: max(46vw, 600px);
+  }
+}
+
+/* Phones: keep the home description to two lines */
+@media (max-width: 480px) {
+  .hero--lg .hero__subtitle {
+    font-size: 1rem;
+  }
 }
