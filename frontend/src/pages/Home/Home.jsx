@@ -28,7 +28,7 @@ export default function Home() {
         imageLabel="Home Hero Image – 1920×900"
         eyebrow="Premium Ceylon Spices"
         title="The True Taste of Ceylon"
-        subtitle="Premium Sri Lankan spices from FragCeylon, sourced from local farmers and packed with care."
+        subtitle="Premium Sri Lankan spices, sourced from local farmers and packed with care."
       >
         <Link to="/products" className="btn btn--gold">
           Explore Products
@@ -41,17 +41,33 @@ export default function Home() {
       {/* ---------- ABOUT THE BUSINESS ---------- */}
       <section className="section home-about">
         <div className="container">
-          <Reveal className="section-header">
-            <span className="eyebrow">Who We Are</span>
-            <h2>Welcome to FragCeylon</h2>
-            <p className="lead">
-              For generations, Sri Lanka has been known as the island of spices. At FragCeylon, we
-              bring that heritage to your kitchen. From our home in Kurunegala, we work closely with
-              local growers to source authentic Ceylon cinnamon, pepper, cloves, turmeric and more,
-              then clean, dry and pack them carefully so every pack arrives fresh, fragrant and full
-              of flavour.
-            </p>
-          </Reveal>
+          <div className="home-about__intro">
+            <Reveal className="home-about__text">
+              <span className="home-about__eyebrow">Who We Are</span>
+              <h2>
+                Welcome to <span>FragCeylon</span>
+              </h2>
+              <p className="home-about__lead">
+                For generations, Sri Lanka has been known as the island of spices. At FragCeylon, we
+                bring that heritage to your kitchen. We work closely with local growers to source
+                authentic Ceylon cinnamon, pepper, cloves, turmeric and more, then clean, dry and
+                pack them carefully so every pack arrives fresh, fragrant and full of flavour.
+              </p>
+              <Link to="/about" className="btn btn--dark">
+                Discover Our Story
+              </Link>
+            </Reveal>
+
+            <Reveal className="home-about__media" delay={150}>
+              <img
+                src="/images/home-about-burst.jpg"
+                alt="A burst of Ceylon spices: turmeric, chilli, cinnamon, cloves and pepper"
+                width="1400"
+                height="1120"
+                loading="lazy"
+              />
+            </Reveal>
+          </div>
 
           <div className="home-about__highlights">
             {HIGHLIGHTS.map((h, i) => (
@@ -59,8 +75,10 @@ export default function Home() {
                 <span className="highlight__icon">
                   <Icon name={h.icon} size={28} />
                 </span>
-                <h3>{h.title}</h3>
-                <p>{h.text}</p>
+                <div>
+                  <h3>{h.title}</h3>
+                  <p>{h.text}</p>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -68,23 +86,24 @@ export default function Home() {
       </section>
 
       {/* ---------- PRODUCTS SLIDER ---------- */}
-      <section className="section section--alt home-products">
+      <section className="section home-products">
         <div className="container">
-          <Reveal className="section-header">
-            <span className="eyebrow">Our Collection</span>
-            <h2>Our Spices</h2>
-            <p>Hand-picked, naturally processed and packed fresh – straight from Sri Lanka.</p>
+          <Reveal className="home-products__header">
+            <div>
+              <span className="home-products__eyebrow">Our Collection</span>
+              <h2>
+                Our <span>Spices</span>
+              </h2>
+              <p>Hand-picked, naturally processed and packed fresh – straight from Sri Lanka.</p>
+            </div>
+            <Link to="/products" className="btn btn--gold">
+              View All Products
+            </Link>
           </Reveal>
 
           <Reveal>
             <ProductSlider products={products} />
           </Reveal>
-
-          <div className="home-products__more">
-            <Link to="/products" className="btn btn--dark">
-              View All Products
-            </Link>
-          </div>
         </div>
       </section>
 
